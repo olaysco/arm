@@ -13,7 +13,7 @@ class CompleteProfileRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class CompleteProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'emp_name' => ['required', 'string', 'max:255'],
+            'emp_address' => ['required', 'string', 'max:255'],
+            'emp_email' => ['required', 'string', 'email', 'max:255',],
+
+            'nok_first_name' => ['required', 'string', 'max:255'],
+            'nok_last_name' => ['required', 'string', 'max:255'],
+            'nok_mobile_number' => ['required', 'string', 'max:12', 'min:10'],
+            'nok_address' => ['required', 'string', 'max:255'],
+            'nok_email' => ['required', 'string', 'email', 'max:255'],
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 return [
 
+    'admin_email' => env('ARM_EMAIL', 'olayiwolaodunsi@gmail.com'),
     /*
     |--------------------------------------------------------------------------
     | Application Name
